@@ -10,10 +10,18 @@ The test bed for the competition was a Hetzner AX161 dedicated server with 32 co
 However, as I'm running this on a MacBook M1 Pro with 10 cores and 16GB of ram, I've scaled down to a 100M row version.
 
 I've modified the original requirements to output to STDOUT and instead write to an Apache Avro file.
+<style>
+    img {
+    max-width: 60%;
+    max-height: 60%;
+}
+</style>
+<div>
+    <img src="assets/run.png"/>
+</div>
+![](assets/run.png)
 
-![](header.png)
-
-![]()
+not too shabby, eh?
 
 ## Installation
 
