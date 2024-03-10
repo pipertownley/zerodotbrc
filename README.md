@@ -14,7 +14,6 @@ I've modified the original requirements to output to STDOUT and instead write to
 <div>
     <img src="assets/run.png" width=60%/>
 </div>
-![](assets/run.png)
 
 not too shabby, eh?
 
