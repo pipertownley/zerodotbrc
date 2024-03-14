@@ -13,9 +13,6 @@ fn main() -> Result<()> {
     // parse args
     let mut args = env::args_os();
     let args_len = args.len();
-    let _ = args.next();
-    let infile = args.next().unwrap().to_string_lossy().into_owned();
-    let outfile = args.last().unwrap().to_string_lossy().into_owned();
 
     // print usage
     if args_len != 3 {
@@ -24,6 +21,12 @@ fn main() -> Result<()> {
             exit(1);
         }
     }
+
+    // pop off and discard basename
+    let _ = args.next();
+    // get args
+    let infile = args.next().expect("infile").to_string_lossy().into_owned();
+    let outfile = args.last().expect("outfile").to_string_lossy().into_owned();
 
     let q = LazyCsvReader::new(infile)
         .with_schema(Some(Arc::new({
