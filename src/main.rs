@@ -36,6 +36,7 @@ fn main() -> Result<()> {
             schema
         })))
         .with_separator(b';')
+        .has_header(true)
         .finish()?;
 
     // This is where most of the work happens. We're grouping by the station,
